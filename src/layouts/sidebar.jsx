@@ -72,6 +72,8 @@ export default function sidebar({ rerendering }) {
                                                                <div className="w-full h-50 ">
                                                                       <TimeSelector
                                                                              callback={(e) => {
+                                                                                    // console.log(e)
+                                                                                    // return
                                                                                     dispatch({ type: SettingsContextTypes.CHANGE_HOURS, startHour: e.from, endHour: e.to });
                                                                                     setOpen(false);
                                                                                     setOpenSetting(false);
@@ -147,6 +149,7 @@ export default function sidebar({ rerendering }) {
                                                                                            id: Random((Get("plans") ?? []))
                                                                                     };
                                                                                     const lastPlans = Get("plans");
+
                                                                                     if (lastPlans) {
                                                                                            Add("plans", [
                                                                                                   ...lastPlans,

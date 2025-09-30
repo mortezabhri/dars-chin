@@ -38,13 +38,13 @@ export default function Table({ day, updater }) {
               busyTimes.sort((a, b) => a.start - b.start);
 
               let freeTimes = [];
-              let current = startTime;
+              let current = Number(startTime);
 
               for (let i = 0; i < busyTimes.length; i++) {
                      let busy = busyTimes[i];
 
                      // out of time rang
-                     if (busy.start < startTime || busy.end > endTime) {
+                     if (Number(busy.start) < Number(startTime) || Number(busy.end) > Number(endTime)) {
                             const allPlans = Get("plans")
                             Add("plans", allPlans.filter(item => item.id !== busy.id))
                             notifyError("درس وارد شده بدلیل خارج بودن محدوده زمانی حذف شد")
@@ -57,7 +57,7 @@ export default function Table({ day, updater }) {
                      }
 
                      // conflict with last data
-                     if (i > 0 && busy.start < busyTimes[i - 1].end) {
+                     if (i > 0 && Number(busy.start) < Number(busyTimes[i - 1].end)) {
                             const allPlans = Get("plans")
                             Add("plans", allPlans.filter(item => item.id !== busy.id))
                             notifyError("درس وارد شده بدلیل تداخل حذف شد")
@@ -70,11 +70,11 @@ export default function Table({ day, updater }) {
                      }
 
                      // remove all spaces between times
-                     if (busy.start > current) {
-                            freeTimes.push({ name: " ", start: current, end: busy.start, hours: busy.start - current, day, id: Random(Get("plans")) });
+                     if (Number(busy.start) > current) {
+                            freeTimes.push({ name: " ", start: current, end: Number(busy.start), hours: Number(busy.start) - current, day, id: Random(Get("plans")) });
                      }
 
-                     current = busy.end;
+                     current = Number(busy.end);
               }
 
               // remove all spaces from last data
@@ -173,7 +173,6 @@ export default function Table({ day, updater }) {
                                                                                                          <path id="Vector" d="M14 16H20M21 10V9C21 7.89543 20.1046 7 19 7H5C3.89543 7 3 7.89543 3 9V11C3 12.1046 3.89543 13 5 13H11" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                                                                   </g>
                                                                                            </svg>
-
                                                                                     </>
                                                                              )}
                                                                       </div>
