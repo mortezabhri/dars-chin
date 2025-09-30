@@ -100,7 +100,7 @@ export default function sidebar({ rerendering }) {
                                                                                     autoComplete="off"
                                                                                     onChange={e => setLesson(e.target.value)}
                                                                                     defaultValue={lesson}
-                                                                                    id="name" type="text" placeholder="برنامه سازی" className="w-full py-2 transition-all outline outline-neutral-300 text-base rounded text-gray-900 placeholder:text-gray-400 focus:outline-secondary focus:outline-1 px-2" />
+                                                                                    id="name" type="text" placeholder="برنامه سازی" className="w-full py-2 transition-all outline outline-neutral-300 text-base rounded text-gray-900 dark:text-neutral-100 placeholder:text-gray-400 focus:outline-secondary focus:outline-1 px-2" />
                                                                       </div>
                                                                       {/* desc */}
                                                                       <div className="w-full font-morabba mb-2">
@@ -111,7 +111,7 @@ export default function sidebar({ rerendering }) {
                                                                                     autoComplete="off"
                                                                                     onChange={e => setDescription(e.target.value)}
                                                                                     defaultValue={description}
-                                                                                    id="name" type="text" placeholder="کلاس 1112 ، طبقه دوم" className="w-full py-2 transition-all outline outline-neutral-300 text-base rounded text-gray-900 placeholder:text-gray-400 focus:outline-secondary focus:outline-1 px-2" />
+                                                                                    id="name" type="text" placeholder="کلاس 1112 ، طبقه دوم" className="w-full py-2 transition-all outline outline-neutral-300 text-base rounded text-gray-900 dark:text-neutral-100 placeholder:text-gray-400 focus:outline-secondary focus:outline-1 px-2" />
                                                                       </div>
                                                                       {/* select box */}
                                                                       <div className="w-full font-morabba">
