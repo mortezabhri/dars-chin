@@ -52,7 +52,7 @@ export default function sidebar({ rerendering }) {
                                           {/* logo */}
                                           <div className="w-full h-38 text-2xl flex justify-center " dir="rtl">
                                                  <h1 className="font-ghaf flex justify-center items-center text-3xl text-black dark:text-white">با</h1>
-                                                 <img src={`${Get("them") === "dark" ? "./public/logos/DarsChinLogo-White.png" : "./public/logos/DarsChinLogo-Black.png"}`} className="object-cover -mr-3" alt="" />
+                                                 <img src={`${Get("them") === "dark" ? "./images/DarsChinLogo-White.png" : "./images/DarsChinLogo-Black.png"}`} className="object-cover -mr-3" alt="" />
                                                  <h1 className="font-ghaf flex justify-center items-center text-3xl -mr-4 text-black dark:text-white">به درسات نظم بده</h1>
                                           </div>
                                           <div className="w-full flex flex-col items-center justify-center gap-y-6 text-xl h-full -mt-4" dir="rtl">
