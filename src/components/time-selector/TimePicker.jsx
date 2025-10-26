@@ -186,7 +186,7 @@ const TimePicker = memo(({ callback, defaultStart, defaultEnd }) => {
                                           <div className="w-full h-16 border border-neutral-300 px-6 rounded-xl cursor-pointer text-center text-2xl text-neutral-800 relative">
                                                  <h6 className="inline text-neutral-800 bg-white dark:text-white dark:bg-neutral-700 absolute right-2 -bottom-2.5 px-1 text-base font-morabba">ساعت</h6>
                                                  <div className="w-full h-48 overflow-hidden -mt-19 py-22" onMouseOver={() => document.body.style.overflow = "hidden"} onMouseLeave={() => document.body.style.overflow = ""}>
-                                                        <ul ref={fromHoursList} onWheel={(event) => scrollHandler(event, fromHoursList.current)} className={` ${styles.scrollList} scrollList flex flex-col gap-y-8`}></ul>
+                                                        <ul ref={fromHoursList} onWheel={(event) => scrollHandler(event, fromHoursList.current)} className={` ${styles.scrollList} scrollList ${document.body.classList.contains("dark") ? "text-white-ul" : "text-black-ul"} flex flex-col gap-y-8 `}></ul>
                                                  </div>
                                           </div>
                                           {/* <div>

@@ -475,3 +475,10 @@ body , html{
 .rotate-3d-menu{
      transform: rotate3d(14, 10, 3, 69deg);
 }
+
+.text-white-ul li {
+     @apply !text-white    
+}
+.text-black-ul li {
+     @apply !text-black
+}
